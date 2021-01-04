@@ -2,7 +2,11 @@ export DEBIAN_FRONTEND=noninteractive
 #Install LXDE lxde.org and xrdp - (make sure to open 3389 on the NSG of the azure vm)
 apt-get update
 apt-get install -y lxde
-apt-get install -y xrdp
+#apt-get install -y xrdp
+# thborn added workaround to solve the issue during the connection
+apt-get remove xrdp vnc4server tightvncserver
+apt-get install tightvncserver
+apt-get install xrdp
 /etc/init.d/xrdp start
 
 #Prepare XWindows System
