@@ -92,9 +92,11 @@ In this task, you provision a Linux virtual machine (VM) running Ubuntu Server 1
 
 > If you would like to review the steps to provision the VM manually and install the required software, see the [Manual resource setup guide](./Manual-resource-setup.md).
 
+>**Change 02: I need to point the URL to my repo and my ARM template**
+
 1. To open a custom deployment screen in the Azure portal, select the Deploy to Azure button below:
 
-    <a href ="https://portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/thiagofborn/MCW-OSS-PaaS-and-DevOps/master/Hands-on%20lab/lab-files/LabVM/azure-deploy.json" target="_blank" title="Deploy to Azure">
+    <a href ="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fthiagofborn%2FMCW-OSS-PaaS-and-DevOps%2Fmaster%2FHands-on%20lab%2Flab-files%2FLabVM%2Fazure-deploy.json" target="_blank" title="Deploy to Azure">
     <img src="http://azuredeploy.net/deploybutton.png"/>
     </a>
 
