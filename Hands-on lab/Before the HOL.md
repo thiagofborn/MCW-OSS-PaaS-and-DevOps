@@ -92,7 +92,7 @@ In this task, you provision a Linux virtual machine (VM) running Ubuntu Server 1
 
 > If you would like to review the steps to provision the VM manually and install the required software, see the [Manual resource setup guide](./Manual-resource-setup.md).
 
->**Change 02: I need to point the URL to my repo and my ARM template**
+>**Change #02: I need to point the URL to my repo and my ARM template**
 
 1. To open a custom deployment screen in the Azure portal, select the Deploy to Azure button below:
 
