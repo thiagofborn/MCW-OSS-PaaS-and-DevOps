@@ -67,7 +67,7 @@ export default class Plans extends Component {
 
                 <div class="how-it-works">
                     <div class="content">
-                        <h2 class="title">How It Works</h2>
+                        <h2 class="title">How It Works if it works... change #14</h2>
                         <ul class="list">
                             <li>
                                 <div class="text-container">
