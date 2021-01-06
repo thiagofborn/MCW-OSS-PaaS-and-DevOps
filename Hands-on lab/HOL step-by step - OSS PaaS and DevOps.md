@@ -286,8 +286,11 @@ In this task, you will clone the starter application, creating a local copy on y
 
 5. At the prompt, enter the following command, replacing `[CLONE-URL]` with URL you copied from GitHub in step 2 above:
 
+>**Change #06:** Avoid issues with permissions. Clone than change owner.
+
    ```bash
    git clone [CLONE-URL]
+   sudo chown -R demouser:demouser ./MCW-OSS-PaaS-and-DevOps
    ```
 
    ![The git clone command is displayed in the bash terminal window.](media/bash-git-clone.png "bash terminal window")
@@ -397,7 +400,9 @@ In this task, you create the collections needed for your database migration and 
 
    ![The New Collection button is highlighted on the Cosmos DB Collections blade.](media/cosmos-db-new-collection.png "New Collection")
 
-5. On the Add Collection dialog, enter the following:
+5. On the Add Collection dialog, enter the following: 
+
+>**Change #03: Sharding definition is now required: for "users" collections you can use  "postalCode". For "plans" you can use "portionSize"**
 
    - **Database id**: Select **Use existing** and select the **best-for-you-organics** database from the list.
    - **Collection id**: Enter **users**.
@@ -442,6 +447,8 @@ In this task, you will retrieve the connection string for your Azure Cosmos DB d
 7. Save `app.js`.
 
 8. In the VS Code integrated terminal, enter the following command to rebuild the application:
+
+> **Change #04**: check if you are on the directory: demouser@LabVM:~/MCW-OSS-PaaS-and-DevOps/Hands-on lab/lab-files$ sudo npm run build
 
    ```bash
    sudo npm run build
@@ -525,6 +532,8 @@ In this task, you will use `mongoimport.exe` to import data to your Cosmos DB ac
 
     ![Data Explorer is selected and highlighted on the Azure Cosmos DB account blade. On the Collections blade, the turned delta next to plans is highlighted, and Documents is selected and highlighted below it. On the Mongo Documents tab to the right, the first of three imported documents is selected and highlighted.](media/cosmos-db-plans-documents.png "Azure Cosmos DB account blade")
 
+>**Change #05: WARNING: --sslAllowInvalidCertificates and --sslAllowInvalidHostnames are deprecated, please use --tlsInsecure instead**. Change from: --sslAllowInvalidCertificates to: --tlsInsecure to skip the warning.
+
 12. Repeat step 8 for the users and orders collections, replacing the `<your_collection>` values with:
 
     - users:
@@ -536,7 +545,7 @@ In this task, you will use `mongoimport.exe` to import data to your Cosmos DB ac
     - orders:
 
     ```bash
-    mongoimport --host best-for-you-db.documents.azure.com:10255 -u best-for-you-db -p miZiDmNrn8TnSAufBvTQsghbYPiQOY69hIHgFhSn7Gf10cvbRLXvqxaherSKY6vQTDrvHHqYyICP4OcLncqWew== --db best-for-you-organics --collection orders --ssl --sslAllowInvalidCertificates --type json --file orders.json
+    mongoimport --host best-for-you-db.documents.azure.com:10255 -u best-for-you-db -p miZiDmNrn8TnSAufBvTQsghbYPiQOY69hIHgFhSn7Gf10cvbRLXvqxaherSKY6vQTDrvHHqYyICP4OcLncqWew== --db best-for-you-organics --collection orders --ssl --tlsInsecure --type json --file orders.json
     ```
 
 13. To verify the starter application is now pulling properly from Azure Cosmos DB, return to your browser running the starter application (<http://localhost:3000>), and refresh the page. You should now see the three plans appear again on the home page. These were pulled from your Azure Cosmos DB database.
@@ -658,6 +667,8 @@ In this task, you use VS Code and the Docker extension to add the necessary file
     ```
 
 12. With the next command you will provide a **registry**, **image name**, and **tag**, using the following format. This format will allow the image to be pushed to your container registry.
+
+>**Change #07:** You will need to enable **Admin user**.
 
     > `[registry]/[image name]:[tag]`
 
