@@ -1338,6 +1338,8 @@ In this task, you commit changes to the `MCW-OSS-PaaS-and-DevOps` starter applic
 
 3. Save the updated files.
 
+>**Change #13:** Make sure to modify the /var/run/docker.sock on the jenkins VM. sudo chmod  44 /var/run/docker.sock
+
 4. As you did in [Task 4](#task-4-trigger-ci-build), above, select the **Source Control icon** from the left-hand menu, enter a commit comment, select **+** to stage the change, and select the **checkmark** to commit the change, and push to GitHub. Enter your credentials if prompted. This will trigger the Jenkins CI/CD pipeline.
 
    ![The updated files are listed under Staged Changes in VS Code, and a commit comment is entered.](media/visual-studio-code-cd-file-updates-commit.png "Visual Studio Code")
