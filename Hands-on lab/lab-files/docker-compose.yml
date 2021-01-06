@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  babelcore:
+    image: babelcore
+    build:
+      context: Hands-on lab/lab-files/node_modules/@babel/core
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
