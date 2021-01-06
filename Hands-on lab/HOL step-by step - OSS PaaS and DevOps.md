@@ -911,6 +911,8 @@ In this task, you add a Jenkins service integration into your GitHub account. Th
 
 12. Edit the command to remove `-i <private key path>`, since the Jenkins instance was configured to use password authentication. The command should now look something like the following:
 
+>**Change #08:** Heads-up, in my case the user was *bitnami* and password: *Password.1!!*
+
     ```bash
     ssh jenkinsadmin@jenkins-mcw.westus2.cloudapp.azure.com
     ```
@@ -981,6 +983,8 @@ In this task, you create an SSH tunnel to the Jenkins server and configure it fo
 
 4. Select **Log in** on the Welcome to Jenkins screen.
 
+>**Change #09:** Note here that the login user is *user* and the password is *Password.1!!*.
+
    ![The Log in link is highlighted on the Welcome to Jenkins dialog.](media/jenkins-welcome-login.png "Welcome to Jenkins!")
 
 5. On the Jenkins on Azure screen, you will see a message that this Jenkins instance does not support https, so logging in through a public IP address has been disabled. You will need to create an SSH tunnel to connect to the Jenkins instance securely.
@@ -990,6 +994,8 @@ In this task, you create an SSH tunnel to the Jenkins server and configure it fo
    ![The ssh command that Jenkins provides is highlighted in the Jenkins on Azure window.](media/jenkins-on-azure.png "Jenkins On Azure window")
 
 7. Open a new bash shell, and at the command prompt paste the copied ssh command, replacing "username" with **jenkinsadmin**. The command will resemble the following:
+
+>**Change #10**: Again the user here could be *bitnami*.
 
    ```bash
    ssh -L 127.0.0.1:8080:localhost:8080 jenkinsadmin@jenkins-kb.westus.cloudapp.azure.com
@@ -1051,6 +1057,7 @@ In this task, you create an SSH tunnel to the Jenkins server and configure it fo
 
 23. Enter **bestforyounode** as the Name, ensure **Install automatically** is checked, and accept the default (latest) version of nodejs.
 
+>**Change #11:** Maybe the latest is not a good idea. Let's leave it as 14.4.0.
     ![In the NodeJS dialog box, bestforyounode is in the Name box, and Install automatically is selected below it.](media/jenkins-nodejs-install.png "NodeJS dialog box")
 
 24. Select **Save**.
