@@ -25,7 +25,7 @@ export default class Plans extends Component {
     render() {
         const plans = this.state.plans;
 
-        let planLogo = <img src={logo} alt="Best For You Organics Company logo" class="logo" />;
+        let planLogo = <img src={logo} alt="Welcome to Best For You Organics Company logo" class="logo" />;
 
         const planCatalog = plans.map(plan => {
             return (

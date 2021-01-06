@@ -1227,10 +1227,11 @@ In this task, you install Docker CE on your Jenkins VM, so it can be used to bui
    sudo apt-get update
    ```
 
-9. Install the latest version of Docker CE, entering `y` when prompted to continue.
+9. Install the latest version of Docker IO, entering `y` when prompted to continue.
 
+>**Change #12:** Docker-ce to Docker.io
    ```bash
-   sudo apt-get install docker-ce
+   sudo apt-get install docker.io
    ```
 
 10. Verify that Docker CE is installed correctly by running the `hello-world` image.
@@ -1249,9 +1250,11 @@ In this task, you install Docker CE on your Jenkins VM, so it can be used to bui
     ```
 
 12. Now, restart the Jenkins service, entering the jenkinsadmin password, `Password.1!!`, when prompted.
-
+>**Change #14:** We can restart Jenkins via Web, or via command line. 
     ```bash
-    service jenkins restart
+    sudo servicce bitnami restart
+    #service jenkins restart this way is not supported.
+    tail -f /opt/bitnami/jenkins/jenkins.logs
     ```
 
 ### Task 7: Add continuous delivery to Jenkins build job
