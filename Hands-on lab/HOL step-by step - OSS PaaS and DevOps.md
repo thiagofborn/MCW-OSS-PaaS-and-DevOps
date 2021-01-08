@@ -286,7 +286,7 @@ In this task, you will clone the starter application, creating a local copy on y
 
 5. At the prompt, enter the following command, replacing `[CLONE-URL]` with URL you copied from GitHub in step 2 above:
 
->**Change #06:** Avoid issues with permissions. Clone than change owner.
+>**Change #01:** To avoid issues with permissions. Clone than change owner.
 
    ```bash
    git clone [CLONE-URL]
@@ -402,7 +402,7 @@ In this task, you create the collections needed for your database migration and 
 
 5. On the Add Collection dialog, enter the following: 
 
->**Change #03: Sharding definition is now required: for "users" collections you can use  "postalCode". For "plans" you can use "portionSize"**
+>**Change #02:** Sharding definition is now required: for "users" collections you can use  "postalCode". For "plans" you can use "portionSize"
 
    - **Database id**: Select **Use existing** and select the **best-for-you-organics** database from the list.
    - **Collection id**: Enter **users**.
@@ -448,7 +448,7 @@ In this task, you will retrieve the connection string for your Azure Cosmos DB d
 
 8. In the VS Code integrated terminal, enter the following command to rebuild the application:
 
-> **Change #04**: check if you are on the directory: demouser@LabVM:~/MCW-OSS-PaaS-and-DevOps/Hands-on lab/lab-files$ sudo npm run build
+> **Change #03**: check if you are on the directory: demouser@LabVM:~/MCW-OSS-PaaS-and-DevOps/Hands-on lab/lab-files$ sudo npm run build
 
    ```bash
    sudo npm run build
@@ -532,7 +532,7 @@ In this task, you will use `mongoimport.exe` to import data to your Cosmos DB ac
 
     ![Data Explorer is selected and highlighted on the Azure Cosmos DB account blade. On the Collections blade, the turned delta next to plans is highlighted, and Documents is selected and highlighted below it. On the Mongo Documents tab to the right, the first of three imported documents is selected and highlighted.](media/cosmos-db-plans-documents.png "Azure Cosmos DB account blade")
 
->**Change #05: WARNING: --sslAllowInvalidCertificates and --sslAllowInvalidHostnames are deprecated, please use --tlsInsecure instead**. Change from: --sslAllowInvalidCertificates to: --tlsInsecure to skip the warning.
+>**Change #04:** WARNING: --sslAllowInvalidCertificates and --sslAllowInvalidHostnames are deprecated, please use --tlsInsecure instead. Change from: --sslAllowInvalidCertificates to: --tlsInsecure to skip the warning.
 
 12. Repeat step 8 for the users and orders collections, replacing the `<your_collection>` values with:
 
@@ -668,7 +668,7 @@ In this task, you use VS Code and the Docker extension to add the necessary file
 
 12. With the next command you will provide a **registry**, **image name**, and **tag**, using the following format. This format will allow the image to be pushed to your container registry.
 
->**Change #07:** You will need to enable **Admin user**.
+>**Change #05:** You will need to enable **Admin user**.
 
     > `[registry]/[image name]:[tag]`
 
@@ -911,7 +911,7 @@ In this task, you add a Jenkins service integration into your GitHub account. Th
 
 12. Edit the command to remove `-i <private key path>`, since the Jenkins instance was configured to use password authentication. The command should now look something like the following:
 
->**Change #08:** Heads-up, in my case the user was *bitnami* and password: *Password.1!!*
+>**Change #06:** Heads-up, in my case the user was *bitnami* and password: *Password.1!!*
 
     ```bash
     ssh jenkinsadmin@jenkins-mcw.westus2.cloudapp.azure.com
@@ -983,7 +983,7 @@ In this task, you create an SSH tunnel to the Jenkins server and configure it fo
 
 4. Select **Log in** on the Welcome to Jenkins screen.
 
->**Change #09:** Note here that the login user is *user* and the password is *Password.1!!*.
+>**Change #07:** Note here that the login user is *user* and the password is *Password.1!!*.
 
    ![The Log in link is highlighted on the Welcome to Jenkins dialog.](media/jenkins-welcome-login.png "Welcome to Jenkins!")
 
@@ -995,7 +995,7 @@ In this task, you create an SSH tunnel to the Jenkins server and configure it fo
 
 7. Open a new bash shell, and at the command prompt paste the copied ssh command, replacing "username" with **jenkinsadmin**. The command will resemble the following:
 
->**Change #10**: Again the user here could be *bitnami*.
+>**Change #08**: Again the user here could be *bitnami*.
 
    ```bash
    ssh -L 127.0.0.1:8080:localhost:8080 jenkinsadmin@jenkins-kb.westus.cloudapp.azure.com
@@ -1057,7 +1057,7 @@ In this task, you create an SSH tunnel to the Jenkins server and configure it fo
 
 23. Enter **bestforyounode** as the Name, ensure **Install automatically** is checked, and accept the default (latest) version of nodejs.
 
->**Change #11:** Maybe the latest is not a good idea. Let's leave it as 14.4.0.
+>**Change #09:** Maybe the latest is not a good idea. Let's leave it as 14.4.0.
     ![In the NodeJS dialog box, bestforyounode is in the Name box, and Install automatically is selected below it.](media/jenkins-nodejs-install.png "NodeJS dialog box")
 
 24. Select **Save**.
@@ -1229,7 +1229,7 @@ In this task, you install Docker CE on your Jenkins VM, so it can be used to bui
 
 9. Install the latest version of Docker IO, entering `y` when prompted to continue.
 
->**Change #12:** Docker-ce to Docker.io
+>**Change #10:** Docker-ce to Docker.io
    ```bash
    sudo apt-get install docker.io
    ```
@@ -1250,7 +1250,7 @@ In this task, you install Docker CE on your Jenkins VM, so it can be used to bui
     ```
 
 12. Now, restart the Jenkins service, entering the jenkinsadmin password, `Password.1!!`, when prompted.
->**Change #14:** We can restart Jenkins via Web, or via command line. 
+>**Change #11:** We can restart Jenkins via Web, or via command line. 
     ```bash
     sudo servicce bitnami restart
     #service jenkins restart this way is not supported.
@@ -1338,7 +1338,7 @@ In this task, you commit changes to the `MCW-OSS-PaaS-and-DevOps` starter applic
 
 3. Save the updated files.
 
->**Change #13:** Make sure to modify the /var/run/docker.sock on the jenkins VM. sudo chmod 777 /var/run/docker.sock
+>**Change #12:** Make sure to modify the /var/run/docker.sock on the jenkins VM. sudo chmod 777 /var/run/docker.sock
 
 4. As you did in [Task 4](#task-4-trigger-ci-build), above, select the **Source Control icon** from the left-hand menu, enter a commit comment, select **+** to stage the change, and select the **checkmark** to commit the change, and push to GitHub. Enter your credentials if prompted. This will trigger the Jenkins CI/CD pipeline.
 
@@ -1515,9 +1515,13 @@ In this task, you create a function that function sends all new orders to a queu
 
 24. Observe the function running in the Logs block.
 
+>**Change #13:** Remember the trigger is a time trigger. 
+
     ![Logs is highlighted below the code block.](media/function-app-logs.png "Select Logs")
 
 25. Return to the starter application in your browser window, and select **Sign In**.
+
+>**Change #14:**In case you run into issues to login select a plan and then login from there.
 
     ![Two Person Plan, High-Pro Plan, and Four Person Plan boxes are visible in this screenshot of the starter application, and Sign In is highlighted at the top.](media/bfyo-web-sign-in.png "Sign in to the starter application")
 
@@ -1669,6 +1673,8 @@ In this task, you will create a SendGrid account through the Azure portal to sen
    - Enter your information into the required fields (First Name, Last Name, Email, Company, and Website)
 
      > **Note**: Website is not listed as a required field, but currently, the deployment fails if this is not populated.
+
+     > **Change #15:** In case the region not be populated (During the SendGrid creation) try to use your local browser.   
 
    ![The SendGrid configuration values specified above are entered into the create a new SendGrid account blade.](media/sendgrid-create-settings.png "Create SendGrid account")
 
