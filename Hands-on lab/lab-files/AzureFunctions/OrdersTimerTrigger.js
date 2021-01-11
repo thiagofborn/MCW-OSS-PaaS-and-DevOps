@@ -1,7 +1,7 @@
 const mongodb = require('mongodb');
 
 // TODO: Replace the uri value with your Cosmos DB primary connection string.
-const uri = '<your-cosmos-db-connection-string>';
+const uri = 'mongodb://hands-on-lab-cosmosdb:JSL3h6HhSgqsJkZaeDOimibbUPPOyGqpnUnlOPHMNiUWK5TkK5rshWbJuOD1nqbPVMhHuVSw0df9kATBPwLXUg==@hands-on-lab-cosmosdb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@hands-on-lab-cosmosdb@';
 const database = 'best-for-you-organics';
 const collection = 'orders';
 
