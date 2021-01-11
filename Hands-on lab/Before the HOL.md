@@ -319,7 +319,7 @@ In this task, you create a new Logic App, which will use a Outlook.com connector
     - **Location:** Select the location you have been using for resources in this hands-on lab.
     - **Log Analytics**: Select Off.
 
-    ![The information above is entered on the Create logic app blade.](media/logic-app-create-basics-tab.png "Logic App blade")
+    ![The information above is entered on the Create logic app blade.](media/logic-app-create-basics-tab-new.png "Logic App blade")
 
 4. Select **Review + create**.
 
