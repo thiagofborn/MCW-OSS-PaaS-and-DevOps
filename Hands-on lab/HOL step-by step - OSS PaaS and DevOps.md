@@ -1230,6 +1230,7 @@ In this task, you install Docker CE on your Jenkins VM, so it can be used to bui
 9. Install the latest version of Docker IO, entering `y` when prompted to continue.
 
 >**Change #10:** Docker-ce to Docker.io
+
    ```bash
    sudo apt-get install docker.io
    ```
@@ -1250,6 +1251,7 @@ In this task, you install Docker CE on your Jenkins VM, so it can be used to bui
     ```
 
 12. Now, restart the Jenkins service, entering the jenkinsadmin password, `Password.1!!`, when prompted.
+
 >**Change #11:** We can restart Jenkins via Web, or via command line. 
     ```bash
     sudo servicce bitnami restart
@@ -1638,77 +1640,9 @@ Duration: 30 minutes
 
 In this exercise, you create Logic App, which triggers whenever an item is added to the `notificationqueue` Azure Storage Queue. The Logic App sends an email message to the email address included in the `notificationqueue` message.
 
-### Task 1: Create a SendGrid account
-
-In this task, you will create a SendGrid account through the Azure portal to send email notifications to customers, informing them that their order has been processed and is on its way.
-
-1. In the [Azure portal](https://portal.azure.com/), select the **Show portal menu** icon and then select **+Create a resource** from the menu.
-
-   ![The Show portal menu icon is highlighted, and the portal menu is displayed. Create a resource is highlighted in the portal menu.](media/create-a-resource.png "Create a resource")
-
-2. Enter "SendGrid" into the Search the Marketplace box.
-
-   ![SendGrid is entered into the Search the Marketplace box.](media/azure-create-resource-send-grid.png "Create SendGrid Resource")
-
-3. On the SendGrid blade, select **Create**.
-
-   ![The Create button is highlighted on the SendGrid blade.](media/sendgrid-create.png "Create SendGrid")
-
-4. On the Create a new SendGrid Account **Basics** tab, enter the following:
-
-   **Project details**:
-
-   - **Subscription** Select the subscription you are using for this hands-on lab.
-   - **Resource group**: Choose **Use existing** and select the **hands-on-lab-SUFFIX** resource group.
-   - **Location**: Select the location you are using for resources in this hands-on lab.
-
-   **Account details**:
-
-   - **Name**: **bfyoemail**
-   - **Password**: **Password.1!!**
-   - **Pricing tier**: Select the **Free** plan.
-
-   **Contact details**:
-
-   - Enter your information into the required fields (First Name, Last Name, Email, Company, and Website)
-
-     > **Note**: Website is not listed as a required field, but currently, the deployment fails if this is not populated.
-
-     > **Change #15:** In case the region not be populated (During the SendGrid creation) try to use your local browser.   
-
-   ![The SendGrid configuration values specified above are entered into the create a new SendGrid account blade.](media/sendgrid-create-settings.png "Create SendGrid account")
-
-5. Select **Review + create** and then select **Create** to provision the SendGrid account.
-
-6. When the SendGrid account finishes provisioning, select **Go to resource** from the notifications pane in the Azure portal.
-
-   ![The Go to resource button is highlighted in the SendGrid deployment notification.](media/go-to-resource-sendgrid.png "Go to resource")
-
-7. On the SendGrid account blade, select **Manage** from the toolbar.
-
-   ![The Manage button is highlighted on the SendGrid account toolbar.](media/sendgrid-manage.png "SendGrid account Manage")
-
-8. If prompted, select **Send Confirmation Email** and follow the prompts in the email you receive to confirm your account.
-
-9. On the SendGrid page that opens, expand **Settings** in the left-hand menu, select **API Keys**, and then select **Create API Key**.
-
-   ![The Create API Key button is highlighted on the API Keys page.](media/sendgrid-create-api-key.png "SendGrid API Keys")
-
-10. On the Create API Key page, enter the following:
-
-    - **API Key Name**: Enter `bfyo-api-key`.
-    - **API Key Permissions**: Select **Full Access**.
-    - Select **Create & View**.
-
-    ![The values specified above are entered into the Create API Key page.](media/sendgrid-create-api-key-page.png "Create API Key")
-
-11. Leave the API Key Created screen that appears open. You will be copying the key and pasting it into your Logic App in the next task.
-
-    ![The API Key Created screen is displayed.](media/sendgrid-api-key-created.png "API Key Created")
-
 ### Task 2: Create a Logic App
 
-In this task, you create a new Logic App, which uses the SendGrid connector to send email notifications to users, informing them that their order has processed and shipped.
+In this task, you create a new Logic App, which uses the Outlook.com connector to send email notifications to users, informing them that their order has processed and shipped.
 
 1. In the Azure portal, navigate to the **OrderNotifications** Logic App in the **hands-on-lab-SUFFIX** resource group.
 
@@ -1773,33 +1707,25 @@ In this task, you create a new Logic App, which uses the SendGrid connector to s
 
     ![The + New step button is displayed](media/logic-app-new-step.png "Logic App new step")
 
-15. In the **Choose an action box**, enter "sendgrid," and select **SendGrid** under Connectors.
+15. In the **Choose an action box**, enter "Outlook," and select **Outlook.com** under Connectors.
 
-    ![SendGrid is entered into the search box, and the SendGrid connection is highlighted under connectors.](media/logic-app-connectors-sendgrid.png "Choose a connector")
+    ![SendGrid is entered into the search box, and the SendGrid connection is highlighted under connectors.](media/logic-app-connectors-outlookcom.png "Choose a connector")
 
-16. In the **SendGrid** connector dialog, select **Send email (V4)**.
+16. In the **Outlook.com** connector dialog, select **Send email (V4)**.
 
-    ![Send email (v4) is highlighted in the list of SendGrid actions.](media/logic-app-sendgrid-send-email.png "SendGrid")
+    ![Send email (v4) is highlighted in the list of Outlook.com actions.](media/logic-app-outlookcom-send-email.png "Outlookcom")
 
-17. In the **SendGrid** box, enter the following:
+17. In the **Outlook.com** box, you will need to have an Outlook account:
 
-    - **Connection Name**: Enter `bfyo-sendgrid`.
-    - **SendGrid Api Key**: Return to the **API Key Created** screen in your SendGrid account, and then copy and paste the API key you generated.
-    - Select **Create**.
+    ![The Outlook.com connection will pop-up a browser window to validate the access to your Outlook.com account.](media/logic-app-outlookcomauthorize.png "Outlook.com")
 
-    ![The SendGrid connection configuration information above is entered into the SendGrid box.](media/logic-app-sendgrid-create.png "SendGrid")
+18. In the **Send email (V2)** box, enter the following:
 
-18. In the **Send email (V4)** box, enter the following:
-
-    - **From**: Enter your email address.
-    - **To**: Click in the box, select **Add dynamic content**, and then select the **notificationEmail** property. **NOTE**: If under the Parse JSON Dynamic Content section, you see a message that there were not any outputs to match the input format, select **See more** in the message.
-
-    ![See more is highlighted under Parse JSON in the dynamic content dialog.](media/logic-app-dynamic-content-see-more.png "Dynamic content")
-
-    - **Subject**: Enter "Order: " and then select **orderId** from the dynamic content dialog.
-    - **Email body**: Select **firstName** from the dynamic content dialog, and then enter ", Your Best For You Organics Company order has shipped."
-
-    ![The Send email (V3) dialog is completed with the values specified above.](media/logic-app-send-email-v2-complete.png "Send email (V3)"))
+     - **To**: Add an e-mail that you have access.
+     - **Subject**: You can write something creative and then Click in the box, select **Add Dynamic content**, and then select the **orderId** property.
+    - **Body**: Write some message on the e-mail body.
+  
+    ![See more is highlighted under Parse JSON in the dynamic content dialog.](media/logic-app-dynamic-content-see-more-new.png "Dynamic content")
 
 19. Select **+ New step**.
 
