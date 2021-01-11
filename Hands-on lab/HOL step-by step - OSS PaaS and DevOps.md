@@ -1727,29 +1727,9 @@ In this task, you create a new Logic App, which uses the Outlook.com connector t
   
     ![See more is highlighted under Parse JSON in the dynamic content dialog.](media/logic-app-dynamic-content-see-more-new.png "Dynamic content")
 
-19. Select **+ New step**.
+19. Save and check your the e-mail box you have configured.
 
-    ![The Add an action button is highlighted under + New step.](media/logic-app-new-step.png "Add an action button")
-
-20. In the **Choose an action** dialog, enter "queues" into the search box, and select **Delete message** under Actions.
-
-    ![Queue is highlighted in the Choose an action search box, and Azure Queues -- Delete message is highlighted below.](media/logic-app-azure-queues-delete-message.png "Choose an action dialog box")
-
-21. Select **notificationqueue** for the Queue Name.
-
-22. For Message ID, select the **Message ID** parameter from the dynamic content parameter list.
-
-23. For Pop Receipt, select the **Pop Receipt** parameter from the dynamic content parameter list.
-
-    ![The settings above are entered into the Delete Message box.](media/logic-app-azure-queue-delete-message-settings.png "Delete message")
-
-24. Select **Save** on the **Logic Apps Designer** toolbar.
-
-    ![Save is highlighted on the Logic Apps Designer blade toolbar.](media/logic-app-save.png "Logic Apps Designer blade")
-
-25. The Logic App will begin running immediately, so if you entered your valid email address when you registered your account in the Best for You Organics starter app, and placed an order, you should receive an email message within a minute or two of selecting Save.
-
-    ![The email message from the LogicApp is displayed.](media/order-email-message.png "Email message")
+20. To disable the Logic App you can use the Azure Portal, or if you cleanup the Storage queue.
 
 ## After the hands-on lab
 
