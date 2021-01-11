@@ -92,7 +92,7 @@ In this task, you provision a Linux virtual machine (VM) running Ubuntu Server 1
 
 > If you would like to review the steps to provision the VM manually and install the required software, see the [Manual resource setup guide](./Manual-resource-setup.md).
 
->**Change #02: I need to point the URL to my repo and my ARM template**
+>**Change #01**: I need to point the URL to my repo and my ARM template.
 
 1. To open a custom deployment screen in the Azure portal, select the Deploy to Azure button below:
 
@@ -293,7 +293,9 @@ In this task, you create a Function App in Azure to host your Functions.
 
 ### Task 7: Create Logic App
 
-In this task, you create a new Logic App, which will use a SendGrid connector to send email notifications to users, informing them that their order has processed and shipped.
+>**Change #02**: Instead of Sendgrid we will use Outlook.com.
+
+In this task, you create a new Logic App, which will use a Outlook.com connector to send email notifications to users, informing them that their order has processed and shipped.
 
 1. In the [Azure portal](https://portal.azure.com/), select the **Show portal menu** icon and then select **+Create a resource** from the menu.
 
