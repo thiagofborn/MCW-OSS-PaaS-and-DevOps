@@ -149,7 +149,7 @@ In this task, you provision an Azure Linux VM, which will serve as your Jenkins 
     - **Authentication type:** Select **Password**.
     - **Password:** Enter **Password.1!!**
 
-    ![The Create Jenkins Basic tab is displayed, and the information above is entered into the form.](media/create-jenkins-basics.png "Configure settings on the Create Jenkins Basics blade")
+    ![The Create Jenkins Basic tab is displayed, and the information above is entered into the form.](media/create-jenkins-basics.jpg "Configure settings on the Create Jenkins Basics blade")
 
 4. Select **Next: Additional settings**, and on the **Additional Settings** tab set the following configuration:
 
@@ -207,7 +207,7 @@ In this task, you provision a new Azure Cosmos DB account using the MongoDB API.
     - **Multi-region Writes**: Select Disable.
     - **Availability Zones**: Select Disable.
 
-    ![The information above is entered in the Azure Cosmos DB blade.](media/cosmos-db-create-basics.png "Azure Cosmos DB")
+    ![The information above is entered in the Azure Cosmos DB blade.](media/cosmos-db-create-basics.jpg "Azure Cosmos DB")
 
 4. Select **Review + create** to move to the validation step.
 
@@ -240,7 +240,7 @@ In this task, you create a private Docker registry in the Azure portal, so you h
     - **Location:** Select the location you are using for resources in this hands-on lab.
     - **SKU:** Select **Basic**.
 
-    ![The information above is entered on the Create container registry blade.](media/azure-create-resource-container-registry.png "Create container registry blade")
+    ![The information above is entered on the Create container registry blade.](media/azure-create-resource-container-registry.jpg "Create container registry blade")
 
 4. Select **Review + create**.
 
