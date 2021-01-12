@@ -102,6 +102,8 @@ In this task, you provision a Linux virtual machine (VM) running Ubuntu Server 1
 
 2. On the custom deployment screen in the Azure portal, enter the following:
 
+> **Note 02**: Please pick your prefered region. If you are on Europe for instance a good choice would be North Europe or West Europe.
+
     - **Subscription**: Select the subscription you are using for this hands-on lab.
     - **Resource group**: Select the hands-on-lab-SUFFIX resource group from the dropdown list.
     - **Location**: Select the location you used for the hands-on-lab-SUFFIX resource group.
@@ -126,7 +128,7 @@ In this task, you provision an Azure Linux VM, which will serve as your Jenkins 
 
 2. Enter "jenkins" into the **Search the Marketplace** box, select the **Jenkins** compute item from the results, and then select **Create**.
 
-    ![Jenkins is highlighted in the search box, and the Jenkins row is highlighted in the search results.](media/create-resource-jenkins.png "Azure Portal")
+    ![Jenkins is highlighted in the search box, and the Jenkins row is highlighted in the search results.](media/create-resource-jenkins-new.png "Azure Portal")
 
 3. On the **Create Jenkins Basics** tab, enter the following:
 
