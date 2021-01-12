@@ -112,6 +112,8 @@ In this hands-on lab, you will assist them with completing the OSS application a
    - Node.js and npm
    - MongoDB Community Edition
 
+>**Note 01**: Create the resources on your prefered region to get a better experience and avoid latency.
+
 ## Exercise 1: Run starter application
 
 Duration: 30 minutes
