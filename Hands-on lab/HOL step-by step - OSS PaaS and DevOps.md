@@ -1190,7 +1190,8 @@ In this task, you install Docker CE on your Jenkins VM, so it can be used to bui
    apt-transport-https \
    ca-certificates \
    curl \
-   software-properties-common
+   software-properties-common \
+   gpg-agent
    ```
 
 4. Add Docker's official GPG key.
