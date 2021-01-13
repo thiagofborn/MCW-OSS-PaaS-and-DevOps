@@ -1194,6 +1194,12 @@ In this task, you install Docker CE on your Jenkins VM, so it can be used to bui
    gpg-agent
    ```
 
+>**Note:** Sometime when we copy and paste the multi-line command we have issues. You can it a single line or copy and paste this bellow.
+
+   ```bash
+   sudo apt-get install apt-transport-https ca-certificates curl software-properties-common gpg-agent
+   ```
+
 4. Add Docker's official GPG key.
 
    ```bash
