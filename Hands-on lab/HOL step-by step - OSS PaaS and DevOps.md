@@ -1723,13 +1723,15 @@ In this task, you create a new Logic App, which uses the Outlook.com connector t
 
      - **To**: Add an e-mail that you have access.
      - **Subject**: You can write something creative and then Click in the box, select **Add Dynamic content**, and then select the **orderId** property.
-    - **Body**: Write some message on the e-mail body.
+     - **Body**: Write some message on the e-mail body.
   
     ![See more is highlighted under Parse JSON in the dynamic content dialog.](media/logic-app-dynamic-content-see-more-new.png "Dynamic content")
 
 19. Save and check your the e-mail box you have configured.
 
 20. To disable the Logic App you can use the Azure Portal, or if you cleanup the Storage queue.
+  
+     ![See how to disable Logic App.](media/disable-logic-app.png "Logic App Disable")
 
 ## After the hands-on lab
 
