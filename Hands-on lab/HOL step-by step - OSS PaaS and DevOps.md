@@ -1043,6 +1043,8 @@ In this task, you create an SSH tunnel to the Jenkins server and configure it fo
 
     ![The GitHub plugin is checked.](media/jenkins-plugins-github-checked.png "GitHub plugin")
 
+>**Note**: The text bellow the plugin is: *"This plugin integrates GitHub to Jenkins"*.
+
 19. Select **Install without restart**.
 
 20. Select **Manage Jenkins** from the left-hand menu.
