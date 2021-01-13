@@ -178,7 +178,7 @@ In this task, you provision an Azure Linux VM, which will serve as your Jenkins 
 
 >**Note:** In case you want to use the Jenkins single instance, there will be additional steps.
 
-9. You will need to ssh to the Jenkins VM, and get the password to login to Jenkins.
+9. You will need to ssh to the Jenkins VM, and get the password to login to Jenkins via web console. The ssh password was defined during the VM creation.
 
 ![This step is for those using Bitnami single instance.](media/bitnami-single-instance-credential.png "Bitnami single instance credentials")
 
