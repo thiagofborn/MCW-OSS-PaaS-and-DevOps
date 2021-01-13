@@ -176,6 +176,16 @@ In this task, you provision an Azure Linux VM, which will serve as your Jenkins 
 
 8. It can take 10+ minutes for the VM to provision. You can move on to the next task while you wait.
 
+>**Note:** In case you want to use the Jenkins single instance, there will be additional steps.
+
+9. You will need to ssh to the Jenkins VM, and get the password to login to Jenkins.
+
+![This step is for those using Bitnami single instance.](media/bitnami-single-instance-credential.png "Bitnami single instance credentials")
+
+10. The password file will be something like.
+
+![This step is for those using Bitnami single instance.](media/bitnami-single-instance-credential-sample.png "Bitnami single instance credentials sample")
+
 ### Task 4: Provision Cosmos DB using the MongoDB API
 
 In this task, you provision a new Azure Cosmos DB account using the MongoDB API.
